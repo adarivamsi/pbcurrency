@@ -1,15 +1,3 @@
-chrome.contextMenus.create({
-  title: "Currency Conversion Menu Item",
-  id: "currencyConversionId",
-  contexts: ["page"],
-});
-
-chrome.contextMenus.onClicked.addListener(function (info, tab) {
-  if (info.menuItemId == "currencyConversionId") {
-    alert("Clicked on currency conversion menu item!");
-  }
-});
-
 // When you specify "type": "module" in the manifest background,
 // you can include the service worker as an ES Module,
 import { currencyPatterns } from "./patterns.js";
@@ -30,7 +18,7 @@ chrome.runtime.onInstalled.addListener(async () => {
 // Open a new search tab when the user clicks a context menu
 chrome.contextMenus.onClicked.addListener((item, tab) => {
   const currency = item.menuItemId;
-  const url = new URL(`https://google.com/search?q=${currency}+to`);
+  const url = new URL(`https://google.com/search?q=${currency}+to+INR`);
   url.searchParams.set("q", item.selectionText);
   chrome.tabs.create({ url: url.href, index: tab.index + 1 });
 });
