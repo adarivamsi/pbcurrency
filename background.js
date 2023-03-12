@@ -19,7 +19,8 @@ chrome.runtime.onInstalled.addListener(async () => {
 chrome.contextMenus.onClicked.addListener((item, tab) => {
   const currency = item.menuItemId;
   const url = new URL(`https://google.com/search?q=`);
-  url.searchParams.set("q", item.selectionTextcurrency + `to ${currency}`);
+  const selectionText = item.selectionTextcurrency;
+  url.searchParams.set("q", `${selectionText} to ${currency}`);
   chrome.tabs.create({ url: url.href, index: tab.index + 1 });
 });
 
