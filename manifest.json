@@ -4,9 +4,17 @@
   "version": "1.0.0",
   "description": "Right-click currency functionality to webpages",
   "host_permissions": ["*://*/*"],
+  "permissions": ["contextMenus", "storage"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
-  "permissions": ["contextMenus"],
-  "minimum_chrome_version": "96"
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "pbCurrency16.png",
+    "48": "pbCurrency48.png",
+    "128": "pbCurrency128.png"
+  }
 }
