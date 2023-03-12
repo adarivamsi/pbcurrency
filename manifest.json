@@ -5,7 +5,7 @@
   "description": "Right-click currency functionality to webpages",
   "permissions": ["contextMenus"],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js",
+    "type": "module"
   }
 }
