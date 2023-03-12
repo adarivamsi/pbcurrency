@@ -3,9 +3,23 @@
   "name": "PB Currency",
   "version": "1.0.0",
   "description": "Right-click currency functionality to webpages",
-  "permissions": ["contextMenus"],
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ],
+  "host_permissions": ["*://*/*"],
   "background": {
-    "service_worker": "background.js",
-    "type": "module"
-  }
+    "service_worker": "background.js"
+  },
+  "permissions": ["contextMenus"],
+  "action": {},
+  "commands": {},
+  "content_scripts": [],
+  "web_accessible_resources": [],
+  "protocol_handlers": [],
+  "options_ui": {},
+  "minimum_chrome_version": "96"
 }
