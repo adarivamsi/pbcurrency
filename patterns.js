@@ -1,4 +1,4 @@
 export const currencyPatterns = {
-  USD: "INR",
-  INR: "USD",
+  "USD": "USD",
+  "INR": "INR",
 };
