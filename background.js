@@ -21,7 +21,7 @@ chrome.contextMenus.onClicked.addListener((item, tab) => {
   const url = new URL(`https://google.com/search?q=`);
   const selectionText = item.selectionTextCurrency;
   url.searchParams.set("q", selectionText);
-  url.searchParams.set("q", `to ${currency}`);
+  url.searchParams.append("q", `to ${currency}`);
   chrome.tabs.create({ url: url.href, index: tab.index + 1 });
 });
 
