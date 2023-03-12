@@ -8,11 +8,5 @@
     "service_worker": "background.js"
   },
   "permissions": ["contextMenus"],
-  "action": {},
-  "commands": {},
-  "content_scripts": [],
-  "web_accessible_resources": [],
-  "protocol_handlers": [],
-  "options_ui": {},
   "minimum_chrome_version": "96"
 }
