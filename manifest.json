@@ -3,13 +3,6 @@
   "name": "PB Currency",
   "version": "1.0.0",
   "description": "Right-click currency functionality to webpages",
-  "icons": [
-    {
-      "src": "icon.png",
-      "sizes": "128x128",
-      "type": "image/png"
-    }
-  ],
   "host_permissions": ["*://*/*"],
   "background": {
     "service_worker": "background.js"
