@@ -18,6 +18,7 @@ chrome.runtime.onInstalled.addListener(async () => {
 // Open a new search tab when the user clicks a context menu
 chrome.contextMenus.onClicked.addListener((item, tab) => {
   const currency = item.menuItemId;
+  console.log(currency);
   const url = new URL(`https://google.com/search?q=${currency}+to+INR`);
   url.searchParams.set("q", item.selectionText);
   chrome.tabs.create({ url: url.href, index: tab.index + 1 });
